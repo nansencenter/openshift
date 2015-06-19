@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+sudo /bin/bash $OPENSHIFT_MOCK_DIR/bin/install_nansat.sh &> $OPENSHIFT_MOCK_DIR/setup.log
+
+exit 0

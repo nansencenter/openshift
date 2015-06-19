@@ -1,0 +1,35 @@
+---
+Name: Nansat
+Cartridge-Short-Name: NANSAT
+Display-Name: NANSAT 0.6.6
+Description: A mock cartridge for development use only.
+Version: '0.6.6'
+Versions:
+- '0.6.6'
+License: GNU GPL V3
+Vendor: NERSC
+Cartridge-Version: 0.0.1
+Cartridge-Vendor: NERSC
+Categories:
+- service
+- web_framework
+Provides:
+- Nansat
+Cart-Data:
+- Key: OPENSHIFT_NANSAT
+  Type: environment
+  Description: Nansat
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PORT
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: false
